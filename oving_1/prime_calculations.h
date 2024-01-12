@@ -1,69 +1,91 @@
-// OVING_1_PRIME_CALCULATIONS_H
+// Header guards to prevent multiple inclusions of this header file.
 #ifndef OVING_1_PRIME_CALCULATIONS_H
 #define OVING_1_PRIME_CALCULATIONS_H
 
-#include <vector>    // Includes the standard vector container, similar to Java's ArrayList
-#include <thread>    // Includes support for multi-threading, which is similar to Java's Thread class but with different syntax
-#include <iostream>  // For input/output operations, akin to Java's System.in and System.out
-#include <algorithm> // Provides a collection of algorithm functions such as sort
-#include <cmath>     // For mathematical functions
-#include <limits>    // Provides information about numeric limits of types
-#include "is_prime.h"// Custom header file for prime number checking function
+// Including necessary libraries and headers.
+#include <vector>    // Standard vector container for dynamic arrays.
+#include <thread>    // For creating and managing threads in multi-threading.
+#include <iostream>  // Standard library for input and output operations.
+#include <algorithm> // Contains various algorithm functions like sort, find, etc.
+#include <cmath>     // Contains math functions like sqrt, pow, etc.
+#include <limits>    // Provides limits of fundamental types.
+#include "is_prime.h"// Custom header for checking if a number is prime.
 
+// Define a namespace to encapsulate the functions and avoid naming conflicts.
 namespace oving_1 {
 
     /**
-     * Finds prime numbers within a given range and stores them in a vector.
-     * Similar to Java, it passes the vector by reference to modify the original object.
+     * Function to find prime numbers within a specified range.
+     * This function iterates through all the numbers in the given range and checks
+     * if each number is a prime using the `is_prime` function. If a number is prime,
+     * it is added to the provided vector.
      *
      * @param start The starting integer of the range (inclusive).
      * @param end The ending integer of the range (exclusive).
-     * @param primes A reference to a vector to store the found prime numbers.
+     * @param primes Reference to a vector where the prime numbers will be stored.
      */
     void find_primes_in_range(unsigned int start, unsigned int end, std::vector<unsigned int>& primes) {
         for (unsigned int i = start; i < end; ++i) {
             if (is_prime(i)) {
-                primes.push_back(i); // Adds the prime number to the end of the vector, similar to ArrayList.add in Java
+                primes.push_back(i); // Add the prime number to the vector.
             }
         }
     }
 
     /**
-     * The main function to run the prime number calculation.
-     * It demonstrates input handling, loop control, and basic exception handling in C++.
+     * Main function to execute the prime number calculation program.
+     * This function demonstrates user input handling, basic error handling,
+     * and working with multiple threads to divide the task of finding prime
+     * numbers in a range. It takes user input for the range and the number of
+     * threads to use, and then divides the range among the threads for parallel
+     * processing.
      */
     void run() {
-        unsigned int start, end, thread_count; // Variables for user input
+        unsigned int start, end, thread_count; // Variables to store user inputs.
 
-        // Loop for start input with error handling
+        // Input loop for the start of the range with error handling.
         while (true) {
             std::cout << "Enter start of range (positive integer): ";
-            if (!(std::cin >> start)) {
+            if (!(std::cin >> start)) { // Check for invalid input.
                 std::cout << "Invalid input. Please enter a positive integer." << std::endl;
-                std::cin.clear(); // Clears the error flag on cin
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Ignores the rest of the current line
+                std::cin.clear(); // Reset error flags on cin.
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Ignore the rest of the line.
                 continue;
             }
             break;
         }
 
-        // Loop for end input with error handling
+        // Input loop for the end of the range with error handling.
         while (true) {
             std::cout << "Enter end of range (greater than start): ";
-            if (!(std::cin >> end) || end <= start) {
+            if (!(std::cin >> end) || end <= start) { // Check for invalid or illogical input.
                 std::cout << "Invalid input. Please enter a positive integer greater than start." << std::endl;
-                std::cin.clear();
+                std::cin.clear(); // Reset error flags on cin.
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                 continue;
             }
             break;
         }
 
-        // Loop for thread count input with error handling
+        // Get the number of supported concurrent threads.
+        unsigned int max_threads = std::thread::hardware_concurrency();
+        if (max_threads == 0) {
+            max_threads = 4; // Fallback if hardware concurrency is not available.
+        }
+
+        // Calculate the size of the range.
+        unsigned int range_size = end - start + 1;
+
+        // Input loop for the number of threads with error handling.
         while (true) {
-            std::cout << "Enter number of threads (positive integer, not greater than the range): ";
-            if (!(std::cin >> thread_count) || thread_count == 0 || thread_count > (end - start + 1)) {
-                std::cout << "Invalid input. Please enter a positive integer not exceeding the range (" << (end - start + 1) << ")." << std::endl;
+            std::cout << "Enter number of threads (positive integer, not greater than " << max_threads << "): ";
+            if (!(std::cin >> thread_count) || thread_count == 0 || thread_count > max_threads) {
+                std::cout << "Invalid input. Please enter a positive integer not exceeding " << max_threads << "." << std::endl;
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                continue;
+            } else if (thread_count > range_size) {
+                std::cout << "Number of threads cannot exceed " << range_size << " . Please enter a smaller number." << std::endl;
                 std::cin.clear();
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                 continue;
@@ -71,44 +93,44 @@ namespace oving_1 {
             break;
         }
 
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Clears the input buffer
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Clear the input buffer.
 
-        std::vector<std::thread> threads; // Vector to hold multiple thread objects
-        std::vector<std::vector<unsigned int>> prime_vectors(thread_count); // A vector of vectors to store primes found by each thread
+        std::vector<std::thread> threads; // Vector to store threads.
+        // Vector of vectors for storing primes from each thread.
+        std::vector<std::vector<unsigned int>> prime_vectors(thread_count);
 
-        unsigned int chunk_size = (end - start + 1) / thread_count; // Calculates size of range for each thread
-        unsigned int remaining = (end - start + 1) % thread_count; // Calculates the remainder for even distribution among threads
+        unsigned int chunk_size = (end - start + 1) / thread_count; // The size of the range each thread will process.
+        unsigned int remaining = (end - start + 1) % thread_count; // The remaining range to be distributed.
 
-        // Creating threads to perform parallel computation
+        // Creating and launching threads for parallel computation.
         for (unsigned int i = 0; i < thread_count; ++i) {
             unsigned int thread_start = start + i * chunk_size;
             unsigned int thread_end = thread_start + chunk_size + (i < remaining ? 1 : 0);
 
-            // Emplace_back constructs the thread object in-place and adds it to the threads vector.
-            // It's more efficient than push_back as it avoids an extra copy or move operation.
+            // Construct and add a new thread to the vector.
             threads.emplace_back(find_primes_in_range, thread_start, thread_end, std::ref(prime_vectors[i]));
         }
 
-        // Joining threads - waiting for all threads to complete execution
+        // Wait for all threads to complete.
         for (auto &t : threads) {
-            t.join(); // join() waits for a thread to finish its execution
+            t.join();
         }
 
-        // Merging all primes into a single vector and sorting them
+        // Merge and sort the prime numbers from all threads.
         std::vector<unsigned int> all_primes;
         for (const auto& vec : prime_vectors) {
-            all_primes.insert(all_primes.end(), vec.begin(), vec.end()); // Combines vectors from each thread
+            all_primes.insert(all_primes.end(), vec.begin(), vec.end()); // Combine vectors.
         }
-        std::sort(all_primes.begin(), all_primes.end()); // Sorts the combined vector of primes
+        std::sort(all_primes.begin(), all_primes.end()); // Sort the combined vector.
 
-        // Displaying the prime numbers
+        // Display the prime numbers found.
         std::cout << "Prime numbers: ";
         for (auto prime : all_primes) {
-            std::cout << prime << " "; // Iterates and prints each prime number
+            std::cout << prime << " "; // Print each prime number.
         }
         std::cout << std::endl;
     }
 
-} // namespace oving_1
+}
 
-#endif // OVING_1_PRIME_CALCULATIONS_H
+#endif // End of header guard OVING_1_PRIME_CALCULATIONS_H

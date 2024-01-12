@@ -1,4 +1,6 @@
-"C:\Program Files\JetBrains\CLion 2023.3.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.3.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S Z:\Universitetet\V24\Nettverksprogrammering -B Z:\Universitetet\V24\Nettverksprogrammering\cmake-build-debug
--- Configuring done (0.3s)
--- Generating done (0.0s)
--- Build files have been written to: Z:/Universitetet/V24/Nettverksprogrammering/cmake-build-debug
+"C:\Program Files\JetBrains\CLion 2023.1.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S C:\Users\sande\OneDrive\Dokumenter\Skole\V24\Nettverksprogrammering\Nettverksprogrammering -B C:\Users\sande\OneDrive\Dokumenter\Skole\V24\Nettverksprogrammering\Nettverksprogrammering\cmake-build-debug
+CMake Error at CMakeLists.txt:1 (cmake_minimum_required):
+  CMake 3.27 or higher is required.  You are running version 3.25.2
+
+
+-- Configuring incomplete, errors occurred!

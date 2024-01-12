@@ -1,3 +1,0 @@
-Z:/Universitetet/V24/Nettverksprogrammering/cmake-build-debug/CMakeFiles/Nettverksprogrammering.dir
-Z:/Universitetet/V24/Nettverksprogrammering/cmake-build-debug/CMakeFiles/edit_cache.dir
-Z:/Universitetet/V24/Nettverksprogrammering/cmake-build-debug/CMakeFiles/rebuild_cache.dir
