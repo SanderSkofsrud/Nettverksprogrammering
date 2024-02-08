@@ -200,6 +200,30 @@ oving_1/prime_calculations.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Nettverksprogrammering.dir\build.make CMakeFiles/Nettverksprogrammering.dir/oving_1/prime_calculations.cpp.s
 .PHONY : oving_1/prime_calculations.cpp.s
 
+oving_2/Task.obj: oving_2/Task.cpp.obj
+.PHONY : oving_2/Task.obj
+
+# target to build an object file
+oving_2/Task.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Nettverksprogrammering.dir\build.make CMakeFiles/Nettverksprogrammering.dir/oving_2/Task.cpp.obj
+.PHONY : oving_2/Task.cpp.obj
+
+oving_2/Task.i: oving_2/Task.cpp.i
+.PHONY : oving_2/Task.i
+
+# target to preprocess a source file
+oving_2/Task.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Nettverksprogrammering.dir\build.make CMakeFiles/Nettverksprogrammering.dir/oving_2/Task.cpp.i
+.PHONY : oving_2/Task.cpp.i
+
+oving_2/Task.s: oving_2/Task.cpp.s
+.PHONY : oving_2/Task.s
+
+# target to generate assembly for a file
+oving_2/Task.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Nettverksprogrammering.dir\build.make CMakeFiles/Nettverksprogrammering.dir/oving_2/Task.cpp.s
+.PHONY : oving_2/Task.cpp.s
+
 oving_2/Workers.obj: oving_2/Workers.cpp.obj
 .PHONY : oving_2/Workers.obj
 
@@ -242,6 +266,9 @@ help:
 	@echo ... oving_1/prime_calculations.obj
 	@echo ... oving_1/prime_calculations.i
 	@echo ... oving_1/prime_calculations.s
+	@echo ... oving_2/Task.obj
+	@echo ... oving_2/Task.i
+	@echo ... oving_2/Task.s
 	@echo ... oving_2/Workers.obj
 	@echo ... oving_2/Workers.i
 	@echo ... oving_2/Workers.s

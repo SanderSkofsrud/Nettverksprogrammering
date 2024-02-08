@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/sande/OneDrive/Dokumenter/Skole/V24/Nettverksprogrammering/Nettverksprogrammering/main.cpp" "CMakeFiles/Nettverksprogrammering.dir/main.cpp.obj" "gcc" "CMakeFiles/Nettverksprogrammering.dir/main.cpp.obj.d"
   "C:/Users/sande/OneDrive/Dokumenter/Skole/V24/Nettverksprogrammering/Nettverksprogrammering/oving_1/is_prime.cpp" "CMakeFiles/Nettverksprogrammering.dir/oving_1/is_prime.cpp.obj" "gcc" "CMakeFiles/Nettverksprogrammering.dir/oving_1/is_prime.cpp.obj.d"
   "C:/Users/sande/OneDrive/Dokumenter/Skole/V24/Nettverksprogrammering/Nettverksprogrammering/oving_1/prime_calculations.cpp" "CMakeFiles/Nettverksprogrammering.dir/oving_1/prime_calculations.cpp.obj" "gcc" "CMakeFiles/Nettverksprogrammering.dir/oving_1/prime_calculations.cpp.obj.d"
+  "C:/Users/sande/OneDrive/Dokumenter/Skole/V24/Nettverksprogrammering/Nettverksprogrammering/oving_2/Task.cpp" "CMakeFiles/Nettverksprogrammering.dir/oving_2/Task.cpp.obj" "gcc" "CMakeFiles/Nettverksprogrammering.dir/oving_2/Task.cpp.obj.d"
   "C:/Users/sande/OneDrive/Dokumenter/Skole/V24/Nettverksprogrammering/Nettverksprogrammering/oving_2/Workers.cpp" "CMakeFiles/Nettverksprogrammering.dir/oving_2/Workers.cpp.obj" "gcc" "CMakeFiles/Nettverksprogrammering.dir/oving_2/Workers.cpp.obj.d"
   )
 

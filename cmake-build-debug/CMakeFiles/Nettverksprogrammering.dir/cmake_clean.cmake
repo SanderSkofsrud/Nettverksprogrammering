@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Nettverksprogrammering.dir/oving_1/is_prime.cpp.obj.d"
   "CMakeFiles/Nettverksprogrammering.dir/oving_1/prime_calculations.cpp.obj"
   "CMakeFiles/Nettverksprogrammering.dir/oving_1/prime_calculations.cpp.obj.d"
+  "CMakeFiles/Nettverksprogrammering.dir/oving_2/Task.cpp.obj"
+  "CMakeFiles/Nettverksprogrammering.dir/oving_2/Task.cpp.obj.d"
   "CMakeFiles/Nettverksprogrammering.dir/oving_2/Workers.cpp.obj"
   "CMakeFiles/Nettverksprogrammering.dir/oving_2/Workers.cpp.obj.d"
   "Nettverksprogrammering.exe"

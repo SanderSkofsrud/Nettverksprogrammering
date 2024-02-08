@@ -3,6 +3,10 @@
 #include <thread>
 #include <condition_variable>
 
+// Task class implementation
+Workers::Workers(int num_threads) : num_threads(num_threads) {
+}
+
 /**
  * Submits a task without any delay.
  *
