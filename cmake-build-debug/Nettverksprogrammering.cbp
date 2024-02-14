@@ -109,6 +109,15 @@
 		<Unit filename="C:/Users/sande/OneDrive/Dokumenter/Skole/V24/Nettverksprogrammering/Nettverksprogrammering/oving_2/Workers.h">
 			<Option target="Nettverksprogrammering"/>
 		</Unit>
+		<Unit filename="C:/Users/sande/OneDrive/Dokumenter/Skole/V24/Nettverksprogrammering/Nettverksprogrammering/oving_3/Client.cpp">
+			<Option target="Nettverksprogrammering"/>
+		</Unit>
+		<Unit filename="C:/Users/sande/OneDrive/Dokumenter/Skole/V24/Nettverksprogrammering/Nettverksprogrammering/oving_3/Data.cpp">
+			<Option target="Nettverksprogrammering"/>
+		</Unit>
+		<Unit filename="C:/Users/sande/OneDrive/Dokumenter/Skole/V24/Nettverksprogrammering/Nettverksprogrammering/oving_3/Server.cpp">
+			<Option target="Nettverksprogrammering"/>
+		</Unit>
 		<Unit filename="C:/Users/sande/OneDrive/Dokumenter/Skole/V24/Nettverksprogrammering/Nettverksprogrammering/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
