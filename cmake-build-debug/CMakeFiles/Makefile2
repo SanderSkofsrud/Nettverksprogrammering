@@ -80,12 +80,12 @@ clean: CMakeFiles/Nettverksprogrammering.dir/clean
 CMakeFiles/Nettverksprogrammering.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Nettverksprogrammering.dir\build.make CMakeFiles/Nettverksprogrammering.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Nettverksprogrammering.dir\build.make CMakeFiles/Nettverksprogrammering.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\sande\OneDrive\Dokumenter\Skole\V24\Nettverksprogrammering\Nettverksprogrammering\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target Nettverksprogrammering"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\sande\OneDrive\Dokumenter\Skole\V24\Nettverksprogrammering\Nettverksprogrammering\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target Nettverksprogrammering"
 .PHONY : CMakeFiles/Nettverksprogrammering.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Nettverksprogrammering.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\sande\OneDrive\Dokumenter\Skole\V24\Nettverksprogrammering\Nettverksprogrammering\cmake-build-debug\CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\sande\OneDrive\Dokumenter\Skole\V24\Nettverksprogrammering\Nettverksprogrammering\cmake-build-debug\CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Nettverksprogrammering.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\sande\OneDrive\Dokumenter\Skole\V24\Nettverksprogrammering\Nettverksprogrammering\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/Nettverksprogrammering.dir/rule

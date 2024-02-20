@@ -138,58 +138,13 @@ CMakeFiles/Nettverksprogrammering.dir/oving_2/Task.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Nettverksprogrammering.dir/oving_2/Task.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\sande\OneDrive\Dokumenter\Skole\V24\Nettverksprogrammering\Nettverksprogrammering\oving_2\Task.cpp -o CMakeFiles\Nettverksprogrammering.dir\oving_2\Task.cpp.s
 
-CMakeFiles/Nettverksprogrammering.dir/oving_3/Client.cpp.obj: CMakeFiles/Nettverksprogrammering.dir/flags.make
-CMakeFiles/Nettverksprogrammering.dir/oving_3/Client.cpp.obj: C:/Users/sande/OneDrive/Dokumenter/Skole/V24/Nettverksprogrammering/Nettverksprogrammering/oving_3/Client.cpp
-CMakeFiles/Nettverksprogrammering.dir/oving_3/Client.cpp.obj: CMakeFiles/Nettverksprogrammering.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\sande\OneDrive\Dokumenter\Skole\V24\Nettverksprogrammering\Nettverksprogrammering\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Nettverksprogrammering.dir/oving_3/Client.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Nettverksprogrammering.dir/oving_3/Client.cpp.obj -MF CMakeFiles\Nettverksprogrammering.dir\oving_3\Client.cpp.obj.d -o CMakeFiles\Nettverksprogrammering.dir\oving_3\Client.cpp.obj -c C:\Users\sande\OneDrive\Dokumenter\Skole\V24\Nettverksprogrammering\Nettverksprogrammering\oving_3\Client.cpp
-
-CMakeFiles/Nettverksprogrammering.dir/oving_3/Client.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Nettverksprogrammering.dir/oving_3/Client.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\sande\OneDrive\Dokumenter\Skole\V24\Nettverksprogrammering\Nettverksprogrammering\oving_3\Client.cpp > CMakeFiles\Nettverksprogrammering.dir\oving_3\Client.cpp.i
-
-CMakeFiles/Nettverksprogrammering.dir/oving_3/Client.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Nettverksprogrammering.dir/oving_3/Client.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\sande\OneDrive\Dokumenter\Skole\V24\Nettverksprogrammering\Nettverksprogrammering\oving_3\Client.cpp -o CMakeFiles\Nettverksprogrammering.dir\oving_3\Client.cpp.s
-
-CMakeFiles/Nettverksprogrammering.dir/oving_3/Server.cpp.obj: CMakeFiles/Nettverksprogrammering.dir/flags.make
-CMakeFiles/Nettverksprogrammering.dir/oving_3/Server.cpp.obj: C:/Users/sande/OneDrive/Dokumenter/Skole/V24/Nettverksprogrammering/Nettverksprogrammering/oving_3/Server.cpp
-CMakeFiles/Nettverksprogrammering.dir/oving_3/Server.cpp.obj: CMakeFiles/Nettverksprogrammering.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\sande\OneDrive\Dokumenter\Skole\V24\Nettverksprogrammering\Nettverksprogrammering\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Nettverksprogrammering.dir/oving_3/Server.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Nettverksprogrammering.dir/oving_3/Server.cpp.obj -MF CMakeFiles\Nettverksprogrammering.dir\oving_3\Server.cpp.obj.d -o CMakeFiles\Nettverksprogrammering.dir\oving_3\Server.cpp.obj -c C:\Users\sande\OneDrive\Dokumenter\Skole\V24\Nettverksprogrammering\Nettverksprogrammering\oving_3\Server.cpp
-
-CMakeFiles/Nettverksprogrammering.dir/oving_3/Server.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Nettverksprogrammering.dir/oving_3/Server.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\sande\OneDrive\Dokumenter\Skole\V24\Nettverksprogrammering\Nettverksprogrammering\oving_3\Server.cpp > CMakeFiles\Nettverksprogrammering.dir\oving_3\Server.cpp.i
-
-CMakeFiles/Nettverksprogrammering.dir/oving_3/Server.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Nettverksprogrammering.dir/oving_3/Server.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\sande\OneDrive\Dokumenter\Skole\V24\Nettverksprogrammering\Nettverksprogrammering\oving_3\Server.cpp -o CMakeFiles\Nettverksprogrammering.dir\oving_3\Server.cpp.s
-
-CMakeFiles/Nettverksprogrammering.dir/oving_3/Data.cpp.obj: CMakeFiles/Nettverksprogrammering.dir/flags.make
-CMakeFiles/Nettverksprogrammering.dir/oving_3/Data.cpp.obj: C:/Users/sande/OneDrive/Dokumenter/Skole/V24/Nettverksprogrammering/Nettverksprogrammering/oving_3/Data.cpp
-CMakeFiles/Nettverksprogrammering.dir/oving_3/Data.cpp.obj: CMakeFiles/Nettverksprogrammering.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\sande\OneDrive\Dokumenter\Skole\V24\Nettverksprogrammering\Nettverksprogrammering\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Nettverksprogrammering.dir/oving_3/Data.cpp.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Nettverksprogrammering.dir/oving_3/Data.cpp.obj -MF CMakeFiles\Nettverksprogrammering.dir\oving_3\Data.cpp.obj.d -o CMakeFiles\Nettverksprogrammering.dir\oving_3\Data.cpp.obj -c C:\Users\sande\OneDrive\Dokumenter\Skole\V24\Nettverksprogrammering\Nettverksprogrammering\oving_3\Data.cpp
-
-CMakeFiles/Nettverksprogrammering.dir/oving_3/Data.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Nettverksprogrammering.dir/oving_3/Data.cpp.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\sande\OneDrive\Dokumenter\Skole\V24\Nettverksprogrammering\Nettverksprogrammering\oving_3\Data.cpp > CMakeFiles\Nettverksprogrammering.dir\oving_3\Data.cpp.i
-
-CMakeFiles/Nettverksprogrammering.dir/oving_3/Data.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Nettverksprogrammering.dir/oving_3/Data.cpp.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\sande\OneDrive\Dokumenter\Skole\V24\Nettverksprogrammering\Nettverksprogrammering\oving_3\Data.cpp -o CMakeFiles\Nettverksprogrammering.dir\oving_3\Data.cpp.s
-
 # Object files for target Nettverksprogrammering
 Nettverksprogrammering_OBJECTS = \
 "CMakeFiles/Nettverksprogrammering.dir/main.cpp.obj" \
 "CMakeFiles/Nettverksprogrammering.dir/oving_1/is_prime.cpp.obj" \
 "CMakeFiles/Nettverksprogrammering.dir/oving_1/prime_calculations.cpp.obj" \
 "CMakeFiles/Nettverksprogrammering.dir/oving_2/Workers.cpp.obj" \
-"CMakeFiles/Nettverksprogrammering.dir/oving_2/Task.cpp.obj" \
-"CMakeFiles/Nettverksprogrammering.dir/oving_3/Client.cpp.obj" \
-"CMakeFiles/Nettverksprogrammering.dir/oving_3/Server.cpp.obj" \
-"CMakeFiles/Nettverksprogrammering.dir/oving_3/Data.cpp.obj"
+"CMakeFiles/Nettverksprogrammering.dir/oving_2/Task.cpp.obj"
 
 # External object files for target Nettverksprogrammering
 Nettverksprogrammering_EXTERNAL_OBJECTS =
@@ -199,14 +154,11 @@ Nettverksprogrammering.exe: CMakeFiles/Nettverksprogrammering.dir/oving_1/is_pri
 Nettverksprogrammering.exe: CMakeFiles/Nettverksprogrammering.dir/oving_1/prime_calculations.cpp.obj
 Nettverksprogrammering.exe: CMakeFiles/Nettverksprogrammering.dir/oving_2/Workers.cpp.obj
 Nettverksprogrammering.exe: CMakeFiles/Nettverksprogrammering.dir/oving_2/Task.cpp.obj
-Nettverksprogrammering.exe: CMakeFiles/Nettverksprogrammering.dir/oving_3/Client.cpp.obj
-Nettverksprogrammering.exe: CMakeFiles/Nettverksprogrammering.dir/oving_3/Server.cpp.obj
-Nettverksprogrammering.exe: CMakeFiles/Nettverksprogrammering.dir/oving_3/Data.cpp.obj
 Nettverksprogrammering.exe: CMakeFiles/Nettverksprogrammering.dir/build.make
 Nettverksprogrammering.exe: CMakeFiles/Nettverksprogrammering.dir/linkLibs.rsp
 Nettverksprogrammering.exe: CMakeFiles/Nettverksprogrammering.dir/objects1.rsp
 Nettverksprogrammering.exe: CMakeFiles/Nettverksprogrammering.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\sande\OneDrive\Dokumenter\Skole\V24\Nettverksprogrammering\Nettverksprogrammering\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Nettverksprogrammering.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\sande\OneDrive\Dokumenter\Skole\V24\Nettverksprogrammering\Nettverksprogrammering\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Nettverksprogrammering.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Nettverksprogrammering.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

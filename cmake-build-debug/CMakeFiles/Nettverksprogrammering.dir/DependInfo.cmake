@@ -13,9 +13,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/sande/OneDrive/Dokumenter/Skole/V24/Nettverksprogrammering/Nettverksprogrammering/oving_1/prime_calculations.cpp" "CMakeFiles/Nettverksprogrammering.dir/oving_1/prime_calculations.cpp.obj" "gcc" "CMakeFiles/Nettverksprogrammering.dir/oving_1/prime_calculations.cpp.obj.d"
   "C:/Users/sande/OneDrive/Dokumenter/Skole/V24/Nettverksprogrammering/Nettverksprogrammering/oving_2/Task.cpp" "CMakeFiles/Nettverksprogrammering.dir/oving_2/Task.cpp.obj" "gcc" "CMakeFiles/Nettverksprogrammering.dir/oving_2/Task.cpp.obj.d"
   "C:/Users/sande/OneDrive/Dokumenter/Skole/V24/Nettverksprogrammering/Nettverksprogrammering/oving_2/Workers.cpp" "CMakeFiles/Nettverksprogrammering.dir/oving_2/Workers.cpp.obj" "gcc" "CMakeFiles/Nettverksprogrammering.dir/oving_2/Workers.cpp.obj.d"
-  "C:/Users/sande/OneDrive/Dokumenter/Skole/V24/Nettverksprogrammering/Nettverksprogrammering/oving_3/Client.cpp" "CMakeFiles/Nettverksprogrammering.dir/oving_3/Client.cpp.obj" "gcc" "CMakeFiles/Nettverksprogrammering.dir/oving_3/Client.cpp.obj.d"
-  "C:/Users/sande/OneDrive/Dokumenter/Skole/V24/Nettverksprogrammering/Nettverksprogrammering/oving_3/Data.cpp" "CMakeFiles/Nettverksprogrammering.dir/oving_3/Data.cpp.obj" "gcc" "CMakeFiles/Nettverksprogrammering.dir/oving_3/Data.cpp.obj.d"
-  "C:/Users/sande/OneDrive/Dokumenter/Skole/V24/Nettverksprogrammering/Nettverksprogrammering/oving_3/Server.cpp" "CMakeFiles/Nettverksprogrammering.dir/oving_3/Server.cpp.obj" "gcc" "CMakeFiles/Nettverksprogrammering.dir/oving_3/Server.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

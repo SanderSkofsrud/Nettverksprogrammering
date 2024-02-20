@@ -8,7 +8,4 @@ add_executable(Nettverksprogrammering main.cpp
         oving_1/prime_calculations.cpp
         oving_2/Workers.cpp
         oving_2/Task.cpp
-        oving_3/Client.cpp
-        oving_3/Server.cpp
-        oving_3/Data.cpp
 )

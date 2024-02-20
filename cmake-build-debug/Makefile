@@ -248,78 +248,6 @@ oving_2/Workers.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Nettverksprogrammering.dir\build.make CMakeFiles/Nettverksprogrammering.dir/oving_2/Workers.cpp.s
 .PHONY : oving_2/Workers.cpp.s
 
-oving_3/Client.obj: oving_3/Client.cpp.obj
-.PHONY : oving_3/Client.obj
-
-# target to build an object file
-oving_3/Client.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Nettverksprogrammering.dir\build.make CMakeFiles/Nettverksprogrammering.dir/oving_3/Client.cpp.obj
-.PHONY : oving_3/Client.cpp.obj
-
-oving_3/Client.i: oving_3/Client.cpp.i
-.PHONY : oving_3/Client.i
-
-# target to preprocess a source file
-oving_3/Client.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Nettverksprogrammering.dir\build.make CMakeFiles/Nettverksprogrammering.dir/oving_3/Client.cpp.i
-.PHONY : oving_3/Client.cpp.i
-
-oving_3/Client.s: oving_3/Client.cpp.s
-.PHONY : oving_3/Client.s
-
-# target to generate assembly for a file
-oving_3/Client.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Nettverksprogrammering.dir\build.make CMakeFiles/Nettverksprogrammering.dir/oving_3/Client.cpp.s
-.PHONY : oving_3/Client.cpp.s
-
-oving_3/Data.obj: oving_3/Data.cpp.obj
-.PHONY : oving_3/Data.obj
-
-# target to build an object file
-oving_3/Data.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Nettverksprogrammering.dir\build.make CMakeFiles/Nettverksprogrammering.dir/oving_3/Data.cpp.obj
-.PHONY : oving_3/Data.cpp.obj
-
-oving_3/Data.i: oving_3/Data.cpp.i
-.PHONY : oving_3/Data.i
-
-# target to preprocess a source file
-oving_3/Data.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Nettverksprogrammering.dir\build.make CMakeFiles/Nettverksprogrammering.dir/oving_3/Data.cpp.i
-.PHONY : oving_3/Data.cpp.i
-
-oving_3/Data.s: oving_3/Data.cpp.s
-.PHONY : oving_3/Data.s
-
-# target to generate assembly for a file
-oving_3/Data.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Nettverksprogrammering.dir\build.make CMakeFiles/Nettverksprogrammering.dir/oving_3/Data.cpp.s
-.PHONY : oving_3/Data.cpp.s
-
-oving_3/Server.obj: oving_3/Server.cpp.obj
-.PHONY : oving_3/Server.obj
-
-# target to build an object file
-oving_3/Server.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Nettverksprogrammering.dir\build.make CMakeFiles/Nettverksprogrammering.dir/oving_3/Server.cpp.obj
-.PHONY : oving_3/Server.cpp.obj
-
-oving_3/Server.i: oving_3/Server.cpp.i
-.PHONY : oving_3/Server.i
-
-# target to preprocess a source file
-oving_3/Server.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Nettverksprogrammering.dir\build.make CMakeFiles/Nettverksprogrammering.dir/oving_3/Server.cpp.i
-.PHONY : oving_3/Server.cpp.i
-
-oving_3/Server.s: oving_3/Server.cpp.s
-.PHONY : oving_3/Server.s
-
-# target to generate assembly for a file
-oving_3/Server.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Nettverksprogrammering.dir\build.make CMakeFiles/Nettverksprogrammering.dir/oving_3/Server.cpp.s
-.PHONY : oving_3/Server.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -344,15 +272,6 @@ help:
 	@echo ... oving_2/Workers.obj
 	@echo ... oving_2/Workers.i
 	@echo ... oving_2/Workers.s
-	@echo ... oving_3/Client.obj
-	@echo ... oving_3/Client.i
-	@echo ... oving_3/Client.s
-	@echo ... oving_3/Data.obj
-	@echo ... oving_3/Data.i
-	@echo ... oving_3/Data.s
-	@echo ... oving_3/Server.obj
-	@echo ... oving_3/Server.i
-	@echo ... oving_3/Server.s
 .PHONY : help
 
 
