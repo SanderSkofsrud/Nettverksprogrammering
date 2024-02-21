@@ -6,13 +6,16 @@ from flask import Flask, request, jsonify, send_from_directory
 
 app = Flask(__name__, static_folder='frontend')
 
+
 @app.route('/')
 def index():
     return send_from_directory(app.static_folder, 'index.html')
 
+
 @app.route('/<path:path>')
 def static_file(path):
     return send_from_directory(app.static_folder, path)
+
 
 @app.route('/run-code', methods=['POST'])
 def run_code():
@@ -93,7 +96,8 @@ def run_code():
                 with open(filename, "w") as file:
                     file.write(code)
                 # Compile Rust code
-                subprocess.run(["rustc", filename, "-o", tmpdirname + "/main"], capture_output=True, text=True, timeout=30)
+                subprocess.run(["rustc", filename, "-o", tmpdirname + "/main"], capture_output=True, text=True,
+                               timeout=30)
                 # Run Rust code
                 completed = subprocess.run(
                     [tmpdirname + "/main"],
@@ -110,6 +114,7 @@ def run_code():
         result["error"] = str(e)
 
     return jsonify(result)
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
