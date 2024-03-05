@@ -26,90 +26,101 @@ def run_code():
 
     try:
         with tempfile.TemporaryDirectory() as tmpdirname:
+            dockerfile_content = ""
+            code_filename = ""
+            run_command = []
+
             if language == "python":
-                # Python code can be executed directly
-                completed = subprocess.run(
-                    [sys.executable, "-c", code],
-                    capture_output=True, text=True, timeout=30
-                )
+                dockerfile_content = """
+                FROM python:3.9
+                WORKDIR /code
+                COPY . /code
+                CMD ["python", "script.py"]
+                """
+                code_filename = "script.py"
+
             elif language == "javascript":
-                filename = os.path.join(tmpdirname, "script.js")
-                with open(filename, "w") as file:
-                    file.write(code)
-                completed = subprocess.run(
-                    ["node", filename],
-                    capture_output=True, text=True, timeout=30
-                )
+                dockerfile_content = """
+                FROM node:14
+                WORKDIR /code
+                COPY . /code
+                CMD ["node", "script.js"]
+                """
+                code_filename = "script.js"
 
             elif language == "typescript":
-                filename = os.path.join(tmpdirname, "script.ts")
-                with open(filename, "w") as file:
-                    file.write(code)
-                subprocess.run(
-                    ["tsc", filename],
-                    capture_output=True, text=True, timeout=30
-                )
-                js_filename = os.path.join(tmpdirname, "script.js")
-                completed = subprocess.run(
-                    ["node", js_filename],
-                    capture_output=True, text=True, timeout=30
-                )
+                dockerfile_content = """
+                FROM node:14
+                WORKDIR /code
+                COPY . /code
+                RUN npm install -g typescript
+                RUN tsc script.ts
+                CMD ["node", "script.js"]
+                """
+                code_filename = "script.ts"
+
             elif language == "java":
-                filename = os.path.join(tmpdirname, "Main.java")
-                with open(filename, "w") as file:
-                    file.write(code)
-                # Compile Java code
-                subprocess.run(["javac", filename], capture_output=True, text=True, timeout=30)
-                # Run Java code
-                completed = subprocess.run(
-                    ["java", "-cp", tmpdirname, "Main"],
-                    capture_output=True, text=True, timeout=30
-                )
-            elif language == "cpp":
-                filename = os.path.join(tmpdirname, "main.cpp")
-                executable = os.path.join(tmpdirname, "main")
-                with open(filename, "w") as file:
-                    file.write(code)
-                # Compile C++ code
-                subprocess.run(["g++", filename, "-o", executable], capture_output=True, text=True, timeout=30)
-                # Run C++ code
-                completed = subprocess.run(
-                    [executable],
-                    capture_output=True, text=True, timeout=30
-                )
+                dockerfile_content = """
+                FROM openjdk:11
+                WORKDIR /code
+                COPY . /code
+                RUN javac Main.java
+                CMD ["java", "Main"]
+                """
+                code_filename = "Main.java"
+
             elif language == "c":
-                filename = os.path.join(tmpdirname, "main.c")
-                executable = os.path.join(tmpdirname, "main")
-                with open(filename, "w") as file:
-                    file.write(code)
-                # Compile C code
-                subprocess.run(["gcc", filename, "-o", executable], capture_output=True, text=True, timeout=30)
-                # Run C code
-                completed = subprocess.run(
-                    [executable],
-                    capture_output=True, text=True, timeout=30
-                )
+                dockerfile_content = """
+                FROM gcc:latest
+                WORKDIR /code
+                COPY . /code
+                RUN gcc -o myapp main.c
+                CMD ["./myapp"]
+                """
+                code_filename = "main.c"
+
+            elif language == "cpp":
+                dockerfile_content = """
+                FROM gcc:latest
+                WORKDIR /code
+                COPY . /code
+                RUN g++ -o myapp main.cpp
+                CMD ["./myapp"]
+                """
+                code_filename = "main.cpp"
+
             elif language == "rust":
-                src_dir = os.path.join(tmpdirname, "src")
-                os.mkdir(src_dir)
-                filename = os.path.join(src_dir, "main.rs")
-                with open(filename, "w") as file:
-                    file.write(code)
-                # Compile Rust code
-                subprocess.run(["rustc", filename, "-o", tmpdirname + "/main"], capture_output=True, text=True,
-                               timeout=30)
-                # Run Rust code
-                completed = subprocess.run(
-                    [tmpdirname + "/main"],
-                    capture_output=True, text=True, timeout=30
-                )
-            else:
-                return jsonify({"error": "Unsupported language specified"})
+                dockerfile_content = """
+                FROM rust:latest
+                WORKDIR /code
+                COPY . /code
+                RUN rustc -o myapp main.rs
+                CMD ["./myapp"]
+                """
+                code_filename = "main.rs"
+
+            # Write the user's code to a file
+            with open(os.path.join(tmpdirname, code_filename), "w") as file:
+                file.write(code)
+
+            # Write the Dockerfile
+            with open(os.path.join(tmpdirname, "Dockerfile"), "w") as dockerfile:
+                dockerfile.write(dockerfile_content)
+
+            # Build the Docker image
+            image_tag = f"user_code_execution_{language}:latest"
+            build_command = ["docker", "build", "-t", image_tag, tmpdirname]
+            subprocess.run(build_command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+            # Run the Docker container
+            container_run_command = ["docker", "run", "--rm", image_tag]
+            completed = subprocess.run(container_run_command, capture_output=True, text=True)
 
             result["output"] = completed.stdout
             result["error"] = completed.stderr
-    except subprocess.TimeoutExpired:
-        result["error"] = "Time limit exceeded while running the code"
+
+    except subprocess.CalledProcessError as e:
+        result["error"] = f"Error during Docker operations: {str(e)}"
     except Exception as e:
         result["error"] = str(e)
 
