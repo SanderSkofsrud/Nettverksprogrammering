@@ -2,32 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Title of the HTML document, displayed in the browser's title bar or tab -->
     <title>WebSocket Test Client</title>
     <script>
+        // This script establishes a WebSocket connection and handles UI interactions
         document.addEventListener('DOMContentLoaded', function() {
+            // Create a new WebSocket connection to the specified URL
             let ws = new WebSocket('ws://localhost:3001');
+            // Select the textarea element where messages will be displayed
             const messagesArea = document.getElementById('messages');
 
+            // Event listener for when the WebSocket connection is opened
             ws.onopen = () => {
                 console.log('Connected to the server');
+                // Display a connected message in the textarea
+                messagesArea.value += 'Connected to the server\n';
             };
 
+            // Event listener for receiving messages over the WebSocket
             ws.onmessage = (message) => {
-                messagesArea.value += message.data + '\n'; // Append received message
+                // Append received messages to the textarea
+                messagesArea.value += 'Received: ' + message.data + '\n';
             };
 
+            // Event listener for when the WebSocket connection is closed
+            ws.onclose = () => {
+                console.log('Disconnected from the server');
+                // Display a disconnected message in the textarea
+                messagesArea.value += 'Disconnected from the server\n';
+            };
+
+            // Event listener for WebSocket errors
+            ws.onerror = (error) => {
+                console.log('WebSocket error:', error);
+                // Display an error message in the textarea
+                messagesArea.value += 'Error: Connection failed\n';
+            };
+
+            // Event listener for the send button click event
             document.getElementById('sendButton').addEventListener('click', function() {
+                // Select the input element where the user types messages
                 const messageInput = document.getElementById('messageInput');
+                // Retrieve the message from the input element
                 const message = messageInput.value;
+                // Send the message over the WebSocket
                 ws.send(message);
-                messageInput.value = ''; // Clear input field after sending
+                // Clear the input element
+                messageInput.value = '';
             });
         });
     </script>
 </head>
-<body>
+    <body>
     <h1>WebSocket Client Test</h1>
+    <!-- Textarea for displaying messages -->
     <textarea id="messages" rows="10" cols="50" readonly></textarea><br>
+    <!-- Input for typing messages and a button to send them -->
     <input type="text" id="messageInput"><button id="sendButton">Send</button>
 </body>
 </html>
