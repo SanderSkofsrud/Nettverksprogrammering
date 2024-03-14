@@ -19,6 +19,11 @@ function createWebSocketServer(port, onMessage) {
             }
         };
         socket.on('data', buffer => {
+            // Check for a connection close frame
+            if (buffer[0] === 0x88) { // 0x88 is the opcode for connection close frame
+                socket.end();
+                return;
+            }
             if (buffer.toString().match(/^GET /)) {
                 const headers = (0, utils_1.parseHeaders)(buffer.toString());
                 const acceptKey = headers.get('sec-websocket-key');

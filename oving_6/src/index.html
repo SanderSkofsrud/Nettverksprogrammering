@@ -6,21 +6,28 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             let ws = new WebSocket('ws://localhost:3001');
+            const messagesArea = document.getElementById('messages');
+
             ws.onopen = () => {
                 console.log('Connected to the server');
-                ws.send('Hello, server!');
             };
+
             ws.onmessage = (message) => {
-                console.log('Received message:', message.data);
+                messagesArea.value += message.data + '\n'; // Append received message
             };
-            ws.onclose = () => {
-                console.log('Disconnected from the server');
-            };
+
+            document.getElementById('sendButton').addEventListener('click', function() {
+                const messageInput = document.getElementById('messageInput');
+                const message = messageInput.value;
+                ws.send(message);
+                messageInput.value = ''; // Clear input field after sending
+            });
         });
     </script>
 </head>
-    <body>
+<body>
     <h1>WebSocket Client Test</h1>
-    <p>Open the console to see the output.</p>
+    <textarea id="messages" rows="10" cols="50" readonly></textarea><br>
+    <input type="text" id="messageInput"><button id="sendButton">Send</button>
 </body>
 </html>
